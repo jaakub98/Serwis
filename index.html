@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poradzisz IT Serwis| Profesjonalny Serwis Komputerowy</title>
+    <meta name="description" content="Szybka i profesjonalna naprawa komputerów, laptopów, wymiana podzespołów, czyszczenie, instalacja Windows i oprogramowania. Działalność nierejestrowana – konkurencyjne ceny.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00f5ff;
+            --dark: #0a0a0a;
+            --gray: #1f1f1f;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--dark);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--primary);
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-shadow: 0 0 10px var(--primary);
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--primary); }
+        
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://source.unsplash.com/random/1920x1080/?computer-repair') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #00f5ff, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #000;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s;
+            box-shadow: 0 0 20px rgba(0,245,255,0.4);
+        }
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0,245,255,0.6);
+        }
+
+        section {
+            padding: 100px 5%;
+        }
+        h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: var(--gray);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.4s, box-shadow 0.4s;
+            border: 1px solid #333;
+        }
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,245,255,0.15);
+        }
+        .service-card i {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .about {
+            background: #111;
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .prices {
+            background: var(--gray);
+        }
+        .price-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .price-card:hover {
+            border-color: var(--primary);
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--gray);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            background: #222;
+            border: none;
+            border-radius: 10px;
+            color: white;
+        }
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 3rem 5%;
+            font-size: 0.9rem;
+        }
+        .neon-text {
+            text-shadow: 0 0 10px var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nawigacja -->
+    <header>
+        <div class="logo">Poradzisz IT Serwis</div>
+        <nav>
+            <a href="#uslugi">Usługi</a>
+            <a href="#o-mnie">O mnie</a>
+            <a href="#cennik">Cennik</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Szybka naprawa komputerów i laptopów</h1>
+            <p>Profesjonalny serwis komputerowy z dojazdem do klienta • Działalność nierejestrowana • Konkurencyjne ceny • Gwarancja na usługi</p>
+            <a href="#kontakt" class="btn">Zamów naprawę teraz →</a>
+        </div>
+    </section>
+
+    <!-- Usługi -->
+    <section id="uslugi">
+        <h2>Nasze Usługi</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-laptop-medical"></i>
+                <h3>Naprawa laptopów</h3>
+                <p>Wymiana matrycy, klawiatury, zawiasów, czyszczenie chłodzenia, wymiana pasty termoprzewodzącej.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-desktop"></i>
+                <h3>Naprawa komputerów stacjonarnych</h3>
+                <p>Diagnostyka, wymiana podzespołów (karta graficzna, płyta główna, zasilacz, RAM, SSD/HDD).</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-virus-slash"></i>
+                <h3>Usuwanie wirusów i optymalizacja</h3>
+                <p>Czyszczenie systemu, instalacja Windows 10/11, przyspieszenie komputera.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-hard-drive"></i>
+                <h3>Odzyskiwanie danych</h3>
+                <p>Z uszkodzonych dysków HDD i SSD. Szybko i bezpiecznie.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Instalacja antywirusa i backup</h3>
+                <p>Konfiguracja bezpieczeństwa, tworzenie kopii zapasowych.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>Inne usługi</h3>
+                <p>Montaż PC na zamówienie, upgrade podzespołów, pomoc zdalna, konfiguracja sieci WiFi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- O mnie -->
+    <section id="o-mnie" class="about">
+        <h2>O mnie</h2>
+        <div class="about-content">
+            <div>
+                <img src="https://source.unsplash.com/random/600x400/?technician" alt="Serwis komputerowy" style="width:100%; border-radius:20px; box-shadow: 0 0 30px rgba(0,245,255,0.2);">
+            </div>
+            <div>
+                <p>Cześć! Jestem <strong>technikiem komputerowym</strong> z wieloletnim doświadczeniem. Prowadzę działalność nierejestrowaną, dzięki czemu oferuję bardzo konkurencyjne ceny przy zachowaniu najwyższej jakości usług.</p>
+                <p>Specjalizuję się w naprawach laptopów i komputerów stacjonarnych. Pracuję szybko, rzetelnie i zawsze dbam o bezpieczeństwo Twoich danych.</p>
+                <ul style="margin-top: 1.5rem; list-style: none;">
+                    <li style="margin: 10px 0;"><i class="fas fa-check" style="color:var(--primary);"></i> Dojazd do klienta w promieniu 30 km</li>
+                    <li style="margin: 10px 0;"><i class="fas fa-check" style="color:var(--primary);"></i> Gwarancja na wykonane usługi</li>
+                    <li style="margin: 10px 0;"><i class="fas fa-check" style="color:var(--primary);"></i> Części zamienne z pewnych źródeł</li>
+                    <li style="margin: 10px 0;"><i class="fas fa-check" style="color:var(--primary);"></i> Terminowość i uczciwość</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cennik przykładowy -->
+    <section id="cennik" class="prices">
+        <h2>Orientacyjny Cennik</h2>
+        <div class="services-grid">
+            <div class="price-card">
+                <h3>Czyszczenie + pasta</h3>
+                <p style="font-size:2.5rem; color:var(--primary); margin:1rem 0;">od 99 zł</p>
+                <p>W tym wymiana pasty termoprzewodzącej</p>
+            </div>
+            <div class="price-card">
+                <h3>Instalacja Windows + sterowniki</h3>
+                <p style="font-size:2.5rem; color:var(--primary); margin:1rem 0;">od 79 zł</p>
+            </div>
+            <div class="price-card">
+                <h3>Wymiana matrycy w laptopie</h3>
+                <p style="font-size:2.5rem; color:var(--primary); margin:1rem 0;">od 149 zł + koszt matrycy</p>
+            </div>
+            <div class="price-card">
+                <h3>Usuwanie wirusów</h3>
+                <p style="font-size:2.5rem; color:var(--primary); margin:1rem 0;">od 89 zł</p>
+            </div>
+        </div>
+        <p style="text-align:center; margin-top:3rem; font-style:italic;">Dokładna cena po darmowej diagnostyce. Zawsze informuję o kosztach przed rozpoczęciem naprawy.</p>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt">
+        <h2>Skontaktuj się ze mną</h2>
+        <div class="contact-form">
+            <form action="https://formsubmit.co/twoj@email.pl" method="POST">
+                <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                <input type="tel" name="phone" placeholder="Telefon (najlepiej)" required>
+                <input type="email" name="email" placeholder="E-mail">
+                <textarea name="message" rows="6" placeholder="Opisz problem z komputerem/laptopem..." required></textarea>
+                <button type="submit" class="btn" style="width:100%; padding:16px;">Wyślij zgłoszenie</button>
+            </form>
+            <p style="text-align:center; margin-top:2rem;">
+                <strong>Telefon:</strong> <a href="tel:123456789" style="color:var(--primary);">123 456 789</a><br>
+                <strong>E-mail:</strong> twoj.serwis@email.pl<br>
+                <strong>Godziny otwarcia:</strong> Pon–Pt 9:00–18:00 | Sobota 10:00–14:00
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Poradzisz IT Serwis – Serwis komputerowy • Działalność nierejestrowana</p>
+        <p>Wszystkie prawa zastrzeżone. Strona stworzona z myślą o szybkiej i profesjonalnej obsłudze.</p>
+    </footer>
+
+    <script>
+        // Proste smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
